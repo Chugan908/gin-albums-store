@@ -1,0 +1,28 @@
+curl http://localhost:8080/albums \
+    --include \
+    --header "Content-Type: application/json" \
+    --request "POST" \
+    --data '{"id": "3","title": "Gerbarij","artist": "Felipe","price": 500.00}'
+
+###
+
+curl http://localhost:8080/albums
+
+###
+
+curl http://localhost:8080/albums/3
+
+###
+
+curl  http://localhost:8080/albums/delete/4 \
+    --include \
+    --header "Content-Type: application/json" \
+    --request "DELETE" \
+
+###
+
+curl http://localhost:8080/albums/change/3 \
+    --include \
+    --header "Content-Type: application/json" \
+    --request "PUT" \
+    --data '{"price": 100000.0}'
